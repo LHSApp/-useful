@@ -1,0 +1,193 @@
+                                * {
+                                    margin: 0 auto;
+                                }
+                                
+                                body {
+                                    overflow-x: hidden;
+                                }
+                                
+                                header {
+                                    background-color: cornflowerblue;
+                                    height: 50px;
+                                }
+                                
+                                h1 {
+                                    font-size: 18px;
+                                }
+                                /* SEÇÃO 1*/
+                                
+                                .nome_titulo {
+                                    padding: 20px;
+                                    text-align: center;
+                                }
+                                
+                                .title_1 {
+                                    color: crimson;
+                                    text-align: center;
+                                    padding: 30px 0 70px;
+                                }
+                                
+                                .box_2 {
+                                    background-color: darkorange;
+                                    height: 100%;
+                                    width: 100%;
+                                    padding: 50px 0 50px;
+                                }
+                                
+                                .box_container .box_2 {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+                                }
+                                
+                                .box_container .box_2 .box_3 {
+                                    width: 20%;
+                                    padding: 20px 5px;
+                                    text-align: center;
+                                }
+                                
+                                .box_3 p {
+                                    font-size: 16px;
+                                    color: white;
+                                    font-weight: bold;
+                                    line-height: 16px;
+                                }
+                                
+                                .box_footer {
+                                    width: 100%;
+                                    height: 30px;
+                                    background-color: deeppink;
+                                    padding: 30px 0 30px;
+                                }
+                                
+                                @media screen and (max-width: 768px) {
+                                    .box_container .box_2 .box_3 {
+                                        width: 100%;
+                                        padding: 20px 25px;
+                                    }
+                                }
+                                /* FIM SEÇÃO 1*/
+                                /* SEÇÃO 2*/
+                                
+                                .box_2_1 {
+                                    background-color: green;
+                                    height: 100%;
+                                    width: 100%;
+                                    padding: 50px 0 50px;
+                                }
+                                
+                                .box_container_1 .box_2_1 {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+                                }
+                                
+                                .box_container_1 .box_2_1 .box_3_1 {
+                                    width: 30%;
+                                    padding: 20px 5px;
+                                    text-align: center;
+                                }
+                                
+                                .box_3_1 p {
+                                    font-size: 16px;
+                                    color: white;
+                                    font-weight: bold;
+                                    line-height: 16px;
+                                }
+                                
+                                .box_footer {
+                                    width: 100%;
+                                    height: 30px;
+                                    background-color: deeppink;
+                                }
+                                
+                                @media screen and (max-width: 768px) {
+                                    .box_container_1 .box_2_1 .box_3_1 {
+                                        width: 100%;
+                                        padding: 20px 25px;
+                                    }
+                                }
+                                /* FIM  SEÇÃO 2*/
+                                /* SEÇÃO 3*/
+                                
+                                .box_2_2 {
+                                    background-color: black;
+                                    height: 100%;
+                                    width: 100%;
+                                    padding: 50px 0 50px;
+                                }
+                                
+                                .box_container_2 .box_2_2 {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+                                }
+                                
+                                .box_container_2 .box_2_2 .box_3_2 {
+                                    width: 45%;
+                                    padding: 20px 5px;
+                                    text-align: center;
+                                }
+                                
+                                .box_3_2 p {
+                                    font-size: 16px;
+                                    color: white;
+                                    font-weight: bold;
+                                    line-height: 16px;
+                                }
+                                
+                                .box_footer {
+                                    width: 100%;
+                                    height: 30px;
+                                    background-color: deeppink;
+                                }
+                                
+                                @media screen and (max-width: 768px) {
+                                    .box_container_2 .box_2_2 .box_3_2 {
+                                        width: 100%;
+                                        padding: 20px 25px;
+                                    }
+                                }
+                                /*FIM SEÇÃO 3*/
+                                /* SEÇÃO 4*/
+                                
+                                .box_2_3 {
+                                    background-color: burlywood;
+                                    height: 100%;
+                                    width: 100%;
+                                    padding: 50px 0 50px;
+                                    margin-bottom: 50px;
+                                }
+                                
+                                .box_container_3 .box_2_3 {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+                                }
+                                
+                                .box_container_3 .box_2_3 .box_3_3 {
+                                    width: 45%;
+                                    padding: 20px 5px;
+                                    text-align: center;
+                                }
+                                
+                                .box_3_3 p {
+                                    font-size: 16px;
+                                    color: white;
+                                    font-weight: bold;
+                                    line-height: 16px;
+                                }
+                                
+                                .box_footer {
+                                    width: 100%;
+                                    height: 30px;
+                                    background-color: deeppink;
+                                }
+                                
+                                @media screen and (max-width: 768px) {
+                                    .box_container_3 .box_2_3 .box_3_3 {
+                                        width: 100%;
+                                        padding: 20px 25px;
+                                    }
+                                }
+                                /*FIM SEÇÃO 4*/
