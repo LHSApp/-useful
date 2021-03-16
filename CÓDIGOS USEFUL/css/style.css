@@ -191,3 +191,18 @@
                                     }
                                 }
                                 /*FIM SEÇÃO 4*/
+                                /*Borda*/
+                                
+                                .box_borda {
+                                    border-radius: 50px;
+                                    width: 200px;
+                                    height: 50px;
+                                    background-color: blueviolet;
+                                    padding: 20px 0 20px;
+                                    margin-bottom: 30px;
+                                }
+                                
+                                .box_borda div {
+                                    text-align: center;
+                                    padding: 15px 0 15px;
+                                }
