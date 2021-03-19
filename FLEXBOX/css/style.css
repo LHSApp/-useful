@@ -103,3 +103,11 @@ img {
         order: -1;
     }
 }
+
+
+/*CSS GRID 2*/
+
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+}
