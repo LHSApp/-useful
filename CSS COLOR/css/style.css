@@ -36,7 +36,7 @@ body {
 }
 
 .container .box:hover {
-    transform: translate(-20px);
+    transform: translateY(-20px);
 }
 
 .container .box::before {
@@ -67,5 +67,15 @@ body {
 
 .container .box:nth-child(3)::before,
 .container .box:nth-child(3)::after {
-    background: linear-gradient(315deg, #03a9f4, #ff0058);
+    background: linear-gradient(315deg, #4dff03, #03a9f4);
+}
+
+.container .box span {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background: #000;
+    z-index: 2;
 }
