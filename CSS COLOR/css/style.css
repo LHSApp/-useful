@@ -21,6 +21,7 @@ body {
     padding: 40px 0;
     flex-wrap: wrap;
     margin-bottom: 100px;
+    max-width: 1200px;
 }
 
 .container .box {
