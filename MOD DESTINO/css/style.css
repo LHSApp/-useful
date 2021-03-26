@@ -1,68 +1,82 @@
-            * {
-                box-sizing: border-box;
-                padding: 0;
-                margin: 0;
-            }
-            
-            .background {
-                background-image: url(/img/5.png);
-            }
-            
-            .container {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-            
-            .card {
-                background: white;
-                width: 270px;
-                height: 400px;
-                margin: 10px;
-                border-radius: 10px;
-            }
-            
-            .card-img {
-                display: block;
-                width: 100%;
-                background-size: cover;
-            }
-            
-            .card a {
-                background-color: rgb(2, 0, 36);
-                color: #fff;
-                padding: 8px;
-                display: block;
-                text-align: center;
-                margin: 20px 50px;
-                border-radius: 6px;
-                margin-top: 38px;
-                text-decoration: none;
-            }
-            
-            .card:hover {
-                cursor: pointer;
-                transform: scale(1.03);
-                transition: all 0.5s ease;
-            }
-            
-            .card-text h2 {
-                text-align: center;
-                font-weight: normal;
-            }
-            
-            .card-text p {
-                text-align: center;
-                margin-top: -3px;
-            }
-            
-            .card-text h4 {
-                text-align: center;
-                margin-top: -60px;
-                color: blue;
-                font-size: 35px;
-            }
-            
-            .card-text h3 {
-                padding: 30px;
-            }
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.behind {
+    background-image: url(https://tudoazul.voeazul.com.br/documents/26002/995221/5.png/caddcd0f-aae8-47fb-a498-d3ede3644406?t=1616783241275);
+    background: repeat;
+    background: no-repeat;
+    background-size: cover;
+}
+
+.hold {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.win {
+    background: white;
+    width: 270px;
+    height: 400px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.win-img {
+    display: block;
+    width: 100%;
+    background-size: cover;
+    border-radius: 7px;
+}
+
+.win a {
+    background-color: rgb(2, 0, 36);
+    color: #fff;
+    padding: 8px;
+    display: block;
+    text-align: center;
+    margin: 20px 50px;
+    border-radius: 6px;
+    margin-top: 38px;
+    text-decoration: none;
+}
+
+.win:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 0.5s ease;
+    box-shadow: rgba(0, 0, 0, 0, 0.5);
+}
+
+.win-text h2 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 20px;
+    margin-top: 8px;
+}
+
+.win-text p {
+    text-align: center;
+    margin-top: -3px;
+    color: #21b7e8;
+    padding: 0px 0px 0px 107px;
+}
+
+.win-text h4 {
+    text-align: center;
+    margin-top: -81px;
+    color: #21b7e8;
+    font-size: 57px;
+    padding: 0px;
+}
+
+.win-text h3 {
+    padding: 30px 11px;
+}
+
+.win-text span {
+    font-size: 18px;
+}
