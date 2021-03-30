@@ -1,0 +1,998 @@
+<div>
+    <!-- Links CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- Estilos da Página -->
+    <style>
+        /** Inicio do Estilo do cronometro **/
+        /** Este elemento é criado dentro de seu elemento de destino
+            É usado para que seu próprio elemento não precise ser alterado **/
+        
+        .time_circles {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .container-fluid {
+            width: 100%;
+            padding-right: 21px;
+            padding-left: 9px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
+        @font-face {
+            font-family: 'DS-DIGIB';
+            src: url('ds_digital/DS-DIGI.TTF');
+            /*Para os demais navegadores*/
+            font-weight: normal;
+            font-style: normal;
+        }
+        /** Estes são todos os elementos usados ​​para abrigar todo o texto usado nos círculos do tempo **/
+        
+        .time_circles>div {
+            position: absolute;
+            text-align: center;
+        }
+        /** Títulos (dias, horas, etc) **/
+        
+        .time_circles>div>h4 {
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: DS-DIGIB !important;
+            font-size: 20px !important;
+            bottom: -240%;
+            left: 30%;
+            position: absolute;
+            color: #ffffff;
+        }
+        /** Números de tempo, ou seja: 12 **/
+        
+        .time_circles>div>span {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-family: DS-DIGIB !important;
+            font-size: 50px !important;
+            margin-top: 0.4em;
+            margin-left: -2px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        
+        @media screen and (max-width: 574px) {
+            .time_circles>div>h4 {
+                left: 20%;
+                font-size: 18px !important;
+                bottom: -340%;
+            }
+            .time_circles>div>span {
+                font-size: 30px !important;
+            }
+        }
+        /**--------------------------------------------**/
+        /** Inicio do Estilo Página **/
+        
+        .azv-crono {
+            padding-top: 25px;
+            padding-bottom: 60px;
+            background-color: #081c3b;
+        }
+        
+        .azv-crono .text1 {
+            font-size: 26px;
+            font-family: Helvetica, Arial, sans-serif;
+            color: #21b7e8;
+            font-weight: bold;
+        }
+        
+        .azv-crono .text2 {
+            font-size: 20px;
+            font-family: Helvetica, Arial, sans-serif;
+            color: #ffffff;
+            font-weight: 100;
+        }
+        /**--------------------------------------------**/
+    </style>
+
+    <!-- Corpo da página -->
+    <section class="new-clube-ta-banner conhecaOclube" style="background-image: url(/documents/26002/995259/090_Clube_23_03.jpg) !important;"></section>
+    <div class="box_cronometro">
+        <section class="d-flex flex-column">
+            <div class="container col-12 col-lg-12 d-flex flex-column justify-content-center align-items-center azv-crono">
+                <div class="col-12 col-lg-12">
+                    <p class="text-center"><span class="text1">Aqui, caiu a noite, os preços caem também.</span><br>
+                        <span class="text2">Superpromoção para voar das 20h às 5h da manhã, aproveite, antes que acabe!</span></p>
+                </div>
+                <div class="d-flex container justify-content-center align-items-center azv-banner-crono" style="margin: 0px 0px 40px 0px;">
+                    <div id="DateCountdown" data-date="2021-03-26 23:59:00" style="max-width: 560px; width: 100%;"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Links JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://tudoazul.voeazul.com.br/documents/26002/928058/TimeCircles.js"></script>
+    <script>
+        $("#DateCountdown").TimeCircles({
+            animation: "ticks",
+            bg_width: 1,
+            fg_width: 0.04,
+            circle_bg_color: "#164689",
+            time: {
+                Days: {
+                    text: "Dias",
+                    color: "#ffffff",
+                    show: true
+                },
+                Hours: {
+                    text: "Horas",
+                    color: "#ffffff",
+                    show: true
+                },
+                Minutes: {
+                    text: "Minutos",
+                    color: "#ffffff",
+                    show: true
+                },
+                Seconds: {
+                    text: "Segundos",
+                    color: "#ffffff",
+                    show: true
+                },
+            },
+        });
+    </script>
+</div>
+
+<!--INICIO OFERTA 1-->
+<style type="text/css">
+    .az_oferta_fixalm {
+        background-color: #001638;
+    }
+    
+    .az_oferta_fixalm .az_oferta_fixalm_reais .az_oferta_fixalm_reais_boxreais_content {
+        position: relative;
+    }
+    
+    .az_oferta_fixalm .az_oferta_fixalm_reais .az_oferta_fixalm_reais_boxreais_shape {
+        width: 45%;
+        margin-top: -3px;
+        left: -20px;
+        position: absolute;
+        padding: 10px 30px;
+        background-image: url(https://tudoazul.voeazul.com.br/documents/26002/995221/shape.png/);
+        background-repeat: no-repeat;
+        background-position: left;
+    }
+    
+    .az_oferta_fixalm .az_oferta_fixalm_reais .az_oferta_fixalm_reais_boxreais_shape p {
+        font-size: 27px;
+        color: #21b7e8;
+        font-weight: bold;
+        text-align: right;
+        margin-right: 40px;
+        padding-right: 40px;
+    }
+    
+    .az_oferta_fixalm .az_oferta_fixalm_reais h2 {
+        color: #21b7e8;
+        font-size: 40px;
+        text-align: center;
+        padding: 20px 10px;
+    }
+    
+    .az_oferta_fixalm_reais_boxreais {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(https://tudoazul.voeazul.com.br/documents/26002/995221/bg-salvador.png/);
+    }
+    
+    .az_oferta_fixalm_reais_boxreais2 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(https://tudoazul.voeazul.com.br/documents/26002/995221/bg-rj.png/);
+    }
+    
+    .az_oferta_fixalm_reais_text {
+        padding: 60px 60px 30px 60px;
+        margin: 0 auto;
+        max-width: 1080px;
+    }
+    
+    .az_oferta_fixalm_reais_text .az_oferta_fixalm_reais_text_box {
+        margin: 40px 90px;
+        padding: 10px 40px;
+        max-width: 500px;
+        background-color: rgba(200, 227, 243, 0.8);
+    }
+    
+    .az_oferta_fixalm_reais_text .az_oferta_fixalm_reais_text_box p {
+        font-size: 30px;
+        color: #081c3b;
+    }
+    
+    .az_oferta_fixalm_reais_text .az_oferta_fixalm_reais_text_box .az_oferta_fixalm_reais_text_preco {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    
+    .az_oferta_fixalm_reais_text .az_oferta_fixalm_reais_text_box .az_oferta_fixalm_reais_text_preco p {
+        font-size: 46px;
+    }
+    
+    .az_oferta_fixalm_reais_text .az_oferta_fixalm_reais_text_box .az_oferta_fixalm_reais_text_preco .az_oferta_fixalm_reais_text_value {
+        margin-top: -10px;
+    }
+    
+    .az_oferta_fixalm_reais_text .az_oferta_fixalm_reais_text_box .az_oferta_fixalm_reais_text_preco .az_oferta_fixalm_reais_text_value p {
+        font-weight: bold;
+        font-size: 86px;
+    }
+    
+    .az_oferta_fixalm_reais_text .az_oferta_fixalm_reais_text_box .az_oferta_fixalm_reais_text_preco .az_oferta_fixalm_reais_text_value span {
+        font-size: 130px;
+    }
+    
+    .az_oferta_fixalm_reais_text .az_oferta_fixalm_reais_text_box .az_oferta_fixalm_reais_btn,
+    .az_oferta_fixalm_reais_text .az_oferta_fixalm_reais_text_box .az_oferta_fixalm_pontos_btn {
+        width: 100%;
+        margin: 20px 0;
+    }
+    
+    .az_oferta_fixalm_reais_text .az_oferta_fixalm_reais_text_box .az_oferta_fixalm_reais_btn a {
+        width: 100%;
+        color: #fff;
+        display: block;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        border: 1px solid#081c3b;
+        background-color: #081c3b;
+    }
+    
+    .az_oferta_fixalm_reais_text .az_oferta_fixalm_reais_text_box .az_oferta_fixalm_pontos_btn a {
+        width: 100%;
+        color: #081c3b;
+        display: block;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        border: 1px solid#21b7e8;
+        background-color: #21b7e8;
+    }
+    
+    .az_oferta_fixalm_reais_text .az_oferta_fixalm_reais_text_box .az_oferta_fixalm_reais_btn a:hover {
+        color: #081c3b;
+        background-color: rgba(200, 227, 243, 0.8);
+        transition: 0.3s;
+    }
+    
+    .az_oferta_fixalm_reais_text .az_oferta_fixalm_reais_text_box .az_oferta_fixalm_pontos_btn a:hover {
+        color: #21b7e8;
+        background-color: #081c3b;
+        transition: 0.3s;
+    }
+    
+    @media(max-width:1288px) {
+        .az_oferta_fixalm .az_oferta_fixalm_reais .az_oferta_fixalm_reais_boxreais_shape {
+            background-position: right;
+        }
+    }
+    
+    @media(max-width:862px) {
+        .az_oferta_fixalm .az_oferta_fixalm_reais .az_oferta_fixalm_reais_boxreais_shape p {
+            font-size: 30px;
+            padding-right: 10px;
+        }
+    }
+    
+    @media(max-width:750px) {
+        .az_oferta_fixalm_reais_text {
+            padding: 60px 10px;
+        }
+    }
+    
+    @media(max-width:658px) {
+        .az_oferta_fixalm .az_oferta_fixalm_reais .az_oferta_fixalm_reais_boxreais_shape p {
+            font-size: 25px;
+        }
+    }
+    
+    @media(max-width:636px) {
+        .az_oferta_fixalm_reais_text .az_oferta_fixalm_reais_text_box {
+            margin: 40px 30px;
+        }
+    }
+    
+    @media(max-width:510px) {
+        .az_oferta_fixalm .az_oferta_fixalm_reais .az_oferta_fixalm_reais_boxreais_shape {
+            width: 85%;
+        }
+        .az_oferta_fixalm_reais_text .az_oferta_fixalm_reais_text_box {
+            margin: 40px 10px;
+        }
+        .az_oferta_fixalm_reais_text .az_oferta_fixalm_reais_text_box p {
+            font-size: 20px;
+        }
+        .az_oferta_fixalm_reais_text .az_oferta_fixalm_reais_text_box .az_oferta_fixalm_reais_text_preco p {
+            font-size: 26px;
+        }
+        .az_oferta_fixalm_reais_text .az_oferta_fixalm_reais_text_box .az_oferta_fixalm_reais_text_preco .az_oferta_fixalm_reais_text_value span {
+            font-size: 80px;
+        }
+        .az_oferta_fixalm_reais_text .az_oferta_fixalm_reais_text_box .az_oferta_fixalm_reais_text_preco .az_oferta_fixalm_reais_text_value p {
+            font-size: 46px;
+        }
+    }
+</style>
+<div class="az_oferta_fixalm">
+    <div class="az_oferta_fixalm_reais">
+        <h2>Oferta luminosa</h2>
+
+        <div class="az_oferta_fixalm_reais_boxreais">
+            <div class="az_oferta_fixalm_reais_boxreais_content">
+                <div class="az_oferta_fixalm_reais_boxreais_shape">
+                    <p>Salvador</p>
+                </div>
+            </div>
+
+            <div class="az_oferta_fixalm_reais_text">
+                <div class="az_oferta_fixalm_reais_text_box">
+                    <p>Partindo de: Rio de Janeiro</p>
+
+                    <div class="az_oferta_fixalm_reais_text_preco">
+                        <div>
+                            <p><strong>por:<br />
+R$</strong></p>
+                        </div>
+
+                        <div class="az_oferta_fixalm_reais_text_value">
+                            <p><span>196</span>,00</p>
+                        </div>
+                    </div>
+
+                    <p>com taxa inclusa ou<br />
+                        <strong>7.000 pontos</strong> o trecho + taxas</p>
+
+                    <div class="az_oferta_fixalm_reais_btn"><a href="#" target="_blank">Compre já</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="az_oferta_fixalm">
+    <div class="az_oferta_fixalm_reais">
+        <h2>Resgate antes que seja tarde</h2>
+
+        <div class="az_oferta_fixalm_reais_boxreais2">
+            <div class="az_oferta_fixalm_reais_boxreais_content">
+                <div class="az_oferta_fixalm_reais_boxreais_shape">
+                    <p>Rio de Janeiro</p>
+                </div>
+            </div>
+
+            <div class="az_oferta_fixalm_reais_text">
+                <div class="az_oferta_fixalm_reais_text_box">
+                    <p>Partindo de: São Paulo</p>
+
+                    <div class="az_oferta_fixalm_reais_text_preco">
+                        <div>
+                            <p><strong>por:</strong></p>
+                        </div>
+
+                        <div class="az_oferta_fixalm_reais_text_value">
+                            <p><span>6.000</span></p>
+                        </div>
+                    </div>
+
+                    <p>o trecho + taxas ou<br />
+                        <strong>R$ 265,00</strong> c/ taxa inclusa</p>
+
+                    <div class="az_oferta_fixalm_pontos_btn"><a href="#" target="_blank">Resgate já</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--FIM OFERTA 1-->
+<!-- INICIO OFERTA-->
+
+<div class="new-clube-ta">
+    <style type="text/css">
+        .toggleContain {
+            width: 115px;
+            height: 38px;
+            background-color: #2b6fd8;
+            border-radius: 17px;
+            position: relative;
+            margin: 0px 40px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .bck-071 {
+            background-color: #2b6fd8;
+        }
+        
+        .bck-00b {
+            background-color: #00b5e4;
+        }
+        
+        .toggleOption {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            box-shadow: 0px 2px 7.6px 0.4px rgba(0, 0, 0, 0.34);
+            position: absolute;
+            bottom: -30%;
+            transition: all 0.2s;
+        }
+        
+        .toggleContain .Left {
+            left: -15%;
+            transition: all 0.2s;
+        }
+        /* background-color: #00b5e4; */
+        
+        .toggleContain .Right {
+            left: 60%;
+            transition: all 0.2s;
+        }
+        
+        @media screen and (max-width: 574px) {
+            .toggleContain .Left {
+                left: 0%;
+                transition: all 0.2s;
+            }
+            .toggleContain {
+                margin: 5px 40px;
+                width: 65px;
+                height: 21px;
+            }
+            .toggleOption {
+                width: 34px;
+                height: 34px;
+            }
+            .toggleContain .Right {
+                left: 50%;
+            }
+            .bodyBoxDestination .btn2 {
+                left: 8px !important;
+            }
+            #boxesDestination>div>div:nth-child(1)>div.bodyBoxDestination_right>a {
+                left: 8px !important;
+            }
+            #boxesDestination .headerBoxDestination {
+                font-size: 21px;
+                right: 86px;
+                top: 3px;
+            }
+            .mb-font-13 {
+                font-size: 13px !important;
+            }
+        }
+        
+        .alinhamento-center {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .text-p--subtitle {
+            font-size: 10.341px;
+            color: rgb(109, 110, 113);
+            text-align: center;
+            line-height: 14px;
+        }
+    </style>
+    <style type="text/css">
+        .az_td_mod_006_behind .az_td_mod_006_name_oferta {
+            width: 53%;
+            margin-top: -10px;
+            left: -1px;
+            position: absolute;
+            padding: 15px 30px;
+            background-image: url(https://tudoazul.voeazul.com.br/documents/26002/995221/bg_oferta.png/945663c0-d7b2-4e35-956d-f13f056fea87?t=1616805649386);
+            background-repeat: no-repeat;
+            background-position: left;
+            border-radius: 14px 0px 0px 0px;
+        }
+        
+        .az_td_mod_006_card .az_td_mod_006_name_oferta p {
+            font-size: 16px;
+            color: #21b7e8;
+            font-weight: bold;
+            text-align: right;
+            margin-right: 40px;
+            padding-right: 40px;
+        }
+        
+        .az_td_mod_006_card .az_td_mod_006_block_name_oferta_content {
+            position: relative;
+        }
+        
+        .az_td_mod_006_behind {
+            background-image: url(https://tudoazul.voeazul.com.br/documents/26002/995221/88_lp2_02-min.png);
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+        
+        .az_td_conteiner_mod_066 {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .az_td_mod_006_card {
+            background: white;
+            width: 270px;
+            height: 400px;
+            margin: 18px;
+            border-radius: 14px;
+        }
+        
+        .az_td_mod_006_card-img {
+            display: block;
+            width: 100%;
+            background-size: cover;
+            border-radius: 14px 14px 0px 0px;
+        }
+        
+        .az_td_mod_006_card a {
+            background-color: rgb(2, 0, 36);
+            color: #fff;
+            padding: 8px;
+            display: block;
+            text-align: center;
+            margin: 20px 50px;
+            border-radius: 6px;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+        
+        .az_td_mod_006_card:hover {
+            cursor: pointer;
+            transform: scale(1.03);
+            transition: all 0.5s ease;
+            transform: translateY(-10px);
+        }
+        
+        .az_td_mod_006_card-text h2 {
+            text-align: center;
+            font-weight: normal;
+            font-size: 20px;
+            margin-top: 8px;
+        }
+        
+        .az_td_mod_006_card-text_2 h2 {
+            text-align: center;
+            font-weight: normal;
+            font-size: 20px;
+            margin-top: 8px;
+        }
+        
+        .az_td_mod_006_card-text p {
+            text-align: center;
+            margin-top: -3px;
+            color: #21b7e8;
+            padding: 0px 0px 0px 107px;
+        }
+        
+        .az_td_mod_006_card-text_2 p {
+            text-align: center;
+            margin-top: -3px;
+            color: #21b7e8;
+            padding: 0px 0px 0px 7px;
+        }
+        
+        .az_td_mod_006_card-text h4 {
+            text-align: center;
+            margin-top: -82px;
+            color: #21b7e8;
+            font-size: 57px;
+            padding: 0px;
+        }
+        
+        .az_td_mod_006_card-text_2 h4 {
+            text-align: center;
+            margin-top: -116px;
+            color: #061216;
+            font-size: 57px;
+            padding: 0px;
+            margin-left: 44px;
+        }
+        
+        .az_td_mod_006_card-text h3 {
+            padding: 11px 07px;
+        }
+        
+        .az_td_mod_006_card-text span {
+            font-size: 18px;
+        }
+        
+        .az_td_mod_006_card-text_2 h3 {
+            padding: 30px 11px!important;
+        }
+    </style>
+    <div class="col-lg-12 padding_lados0 d-flex flex-row flex-lg-row justify-content-center align-items-center mb-font-13" style="color: #fff; font-size: 22px; font-weight: bold; padding: 25px 0px;background: #081d3b;margin-bottom: -37px!important;">
+        <div>Comprar<br class="d-block d-lg-none" /> passagens
+        </div>
+
+        <div>
+            <div class="toggleContain bck-071" onclick="toggleDestinysBoxs()">
+                <div class="toggleOption Left">&nbsp;</div>
+            </div>
+        </div>
+
+        <div>Resgatar<br class="d-block d-lg-none" /> passagens
+        </div>
+    </div>
+    <script>
+        function toggleDestinysBoxs() {
+            $(".toggleOption").toggleClass("Left");
+            $(".toggleOption").toggleClass("Right");
+            $(".toggleContain").toggleClass("bck-071");
+            $(".toggleContain").toggleClass("bck-00b");
+            $(".reais").toggleClass("d-none");
+            $(".pontos").toggleClass("dest")
+        };
+    </script>
+
+    <div class="container-fluid pontos d-none">
+        <div class="col-lg-12 padding_lados0 d-flex justify-content-center titleRisca">
+            <div class="cor1 padding_lados0 col-lg-12">
+                <div class="titleRiscaContain risca col-lg-12">
+                    <h4 class="mb-text-center">&nbsp;</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid reais">
+        <div class="col-lg-12 padding_lados0 d-flex justify-content-center titleRisca">
+            <div class="cor1 padding_lados0 col-lg-12" style="color:#041e42 !important">
+                <div class="titleRiscaContain risca col-lg-12">
+                    <h4 class="mb-text-center" style="color:#041e42 !important">&nbsp;</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Pontos-->
+
+    <section class="container-fluid pontos d-none" id="boxesDestination">
+        <section class="az_td_mod_006_behind">
+            <div class="az_td_conteiner_mod_066">
+                <div class="az_td_mod_006_card">
+                    <div class="az_td_mod_006_block_name_oferta_content">
+                        <div class="az_td_mod_006_name_oferta">
+                            <p>Curitiba</p>
+                        </div>
+                    </div>
+
+                    <div class="az_td_mod_006_card-image"><img alt="" class="az_td_mod_006_card-img " src="https://tudoazul.voeazul.com.br/documents/26002/995221/13.png/1b22603d-96ec-4aa5-b9e3-0e76d1d145d7?t=1616783241653" />
+                        <div class="az_td_mod_006_card-text_2">
+                            <h2>Partindo de São Paulo</h2>
+
+                            <h3>por:</h3>
+                            &nbsp;
+
+                            <h4>50.000</h4>
+
+                            <p>pontos o trecho + taxas</p>
+                        </div>
+                        <a href="#" target="_blank">Compre já</a></div>
+                </div>
+
+                <div class="az_td_mod_006_card">
+                    <div class="az_td_mod_006_block_name_oferta_content">
+                        <div class="az_td_mod_006_name_oferta">
+                            <p>Salvador</p>
+                        </div>
+                    </div>
+
+                    <div class="az_td_mod_006_card-image"><img alt="" class="az_td_mod_006_card-img" src="https://tudoazul.voeazul.com.br/documents/26002/995221/12.png/5a24a60a-7ac2-42ca-9b3f-b7156f91ede2?t=1616783241530" />
+                        <div class="az_td_mod_006_card-text_2">
+                            <h2>Partindo de São Paulo</h2>
+
+                            <h3>por:</h3>
+                            &nbsp;
+
+                            <h4>50.000</h4>
+
+                            <p>pontos o trecho + taxas</p>
+                        </div>
+                        <a href="#" target="_blank">Compre já</a></div>
+                </div>
+
+                <div class="az_td_mod_006_card">
+                    <div class="az_td_mod_006_block_name_oferta_content">
+                        <div class="az_td_mod_006_name_oferta">
+                            <p>Salvador</p>
+                        </div>
+                    </div>
+
+                    <div class="az_td_mod_006_card-image"><img alt="" class="az_td_mod_006_card-img bg" src="https://tudoazul.voeazul.com.br/documents/26002/995221/12.png/5a24a60a-7ac2-42ca-9b3f-b7156f91ede2?t=1616783241530" />
+                        <div class="az_td_mod_006_card-text_2">
+                            <h2>Partindo de São Paulo</h2>
+
+                            <h3>por:</h3>
+                            &nbsp;
+
+                            <h4>50.000</h4>
+
+                            <p>pontos o trecho + taxas</p>
+                        </div>
+                        <a href="#" target="_blank">Compre já</a></div>
+                </div>
+            </div>
+
+            <div class="az_td_conteiner_mod_066">
+                <div class="az_td_mod_006_card">
+                    <div class="az_td_mod_006_block_name_oferta_content">
+                        <div class="az_td_mod_006_name_oferta">
+                            <p>Salvador</p>
+                        </div>
+                    </div>
+
+                    <div class="az_td_mod_006_card-image"><img alt="" class="az_td_mod_006_card-img" src="https://tudoazul.voeazul.com.br/documents/26002/995221/13.png/1b22603d-96ec-4aa5-b9e3-0e76d1d145d7?t=1616783241653" />
+                        <div class="az_td_mod_006_card-text_2">
+                            <h2>Partindo de São Paulo</h2>
+
+                            <h3>por:</h3>
+                            &nbsp;
+
+                            <h4>50.000</h4>
+
+                            <p>pontos o trecho + taxas</p>
+                        </div>
+                        <a href="#" target="_blank">Compre já</a></div>
+                </div>
+
+                <div class="az_td_mod_006_card">
+                    <div class="az_td_mod_006_block_name_oferta_content">
+                        <div class="az_td_mod_006_name_oferta">
+                            <p>Salvador</p>
+                        </div>
+                    </div>
+
+                    <div class="az_td_mod_006_card-image"><img alt="" class="az_td_mod_006_card-img bg" src="https://tudoazul.voeazul.com.br/documents/26002/995221/12.png/5a24a60a-7ac2-42ca-9b3f-b7156f91ede2?t=1616783241530" />
+                        <div class="az_td_mod_006_card-text_2">
+                            <h2>Partindo de São Paulo</h2>
+
+                            <h3>por:</h3>
+                            &nbsp;
+
+                            <h4>50.000</h4>
+
+                            <p>pontos o trecho + taxas</p>
+                        </div>
+                        <a href="#" target="_blank">Compre já</a></div>
+                </div>
+
+                <div class="az_td_mod_006_card">
+                    <div class="az_td_mod_006_block_name_oferta_content">
+                        <div class="az_td_mod_006_name_oferta">
+                            <p>Salvador</p>
+                        </div>
+                    </div>
+
+                    <div class="az_td_mod_006_card-image"><img alt="" class="az_td_mod_006_card-img" src="https://tudoazul.voeazul.com.br/documents/26002/995221/12.png/5a24a60a-7ac2-42ca-9b3f-b7156f91ede2?t=1616783241530" />
+                        <div class="az_td_mod_006_card-text_2">
+                            <h2>Partindo de São Paulo</h2>
+
+                            <h3>por:</h3>
+                            &nbsp;
+
+                            <h4>50.000</h4>
+
+                            <p>pontos o trecho + taxas</p>
+                        </div>
+                        <a href="#" target="_blank">Compre já</a></div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!--Reias-->
+
+    <section class="container-fluid reais" id="boxesDestination">
+        <section class="az_td_mod_006_behind">
+            <div class="az_td_conteiner_mod_066">
+                <div class="az_td_mod_006_card">
+                    <div class="az_td_mod_006_block_name_oferta_content">
+                        <div class="az_td_mod_006_name_oferta">
+                            <p>Salvador</p>
+                        </div>
+                    </div>
+
+                    <div class="az_td_mod_006_card-image"><img alt="" class="az_td_mod_006_card-img " src="https://tudoazul.voeazul.com.br/documents/26002/995221/13.png/1b22603d-96ec-4aa5-b9e3-0e76d1d145d7?t=1616783241653" />
+                        <div class="az_td_mod_006_card-text">
+                            <h2>Partindo de São Paulo</h2>
+
+                            <h3>por:</h3>
+                            &nbsp;
+
+                            <h4><span>R$</span> 240,00</h4>
+
+                            <p>c/taxa inclusa</p>
+                        </div>
+                        <a href="#" target="_blank">Compre já</a></div>
+                </div>
+
+                <div class="az_td_mod_006_card">
+                    <div class="az_td_mod_006_block_name_oferta_content">
+                        <div class="az_td_mod_006_name_oferta">
+                            <p>Salvador</p>
+                        </div>
+                    </div>
+
+                    <div class="az_td_mod_006_card-image"><img alt="" class="az_td_mod_006_card-img" src="https://tudoazul.voeazul.com.br/documents/26002/995221/12.png/5a24a60a-7ac2-42ca-9b3f-b7156f91ede2?t=1616783241530" />
+                        <div class="az_td_mod_006_card-text">
+                            <h2>Partindo de São Paulo</h2>
+
+                            <h3>por:</h3>
+                            &nbsp;
+
+                            <h4><span>R$</span> 240,00</h4>
+
+                            <p>c/taxa inclusa</p>
+                        </div>
+                        <a href="#" target="_blank">Compre já</a></div>
+                </div>
+
+                <div class="az_td_mod_006_card">
+                    <div class="az_td_mod_006_block_name_oferta_content">
+                        <div class="az_td_mod_006_name_oferta">
+                            <p>Salvador</p>
+                        </div>
+                    </div>
+
+                    <div class="az_td_mod_006_card-image"><img alt="" class="az_td_mod_006_card-img bg" src="https://tudoazul.voeazul.com.br/documents/26002/995221/12.png/5a24a60a-7ac2-42ca-9b3f-b7156f91ede2?t=1616783241530" />
+                        <div class="az_td_mod_006_card-text">
+                            <h2>Partindo de São Paulo</h2>
+
+                            <h3>por:</h3>
+                            &nbsp;
+
+                            <h4><span>R$</span> 240,00</h4>
+
+                            <p>c/taxa inclusa</p>
+                        </div>
+                        <a href="#" target="_blank">Compre já</a></div>
+                </div>
+            </div>
+
+            <div class="az_td_conteiner_mod_066">
+                <div class="az_td_mod_006_card">
+                    <div class="az_td_mod_006_block_name_oferta_content">
+                        <div class="az_td_mod_006_name_oferta">
+                            <p>Salvador</p>
+                        </div>
+                    </div>
+
+                    <div class="az_td_mod_006_card-image"><img alt="" class="az_td_mod_006_card-img" src="https://tudoazul.voeazul.com.br/documents/26002/995221/13.png/1b22603d-96ec-4aa5-b9e3-0e76d1d145d7?t=1616783241653" />
+                        <div class="az_td_mod_006_card-text">
+                            <h2>Partindo de São Paulo</h2>
+
+                            <h3>por:</h3>
+                            &nbsp;
+
+                            <h4><span>R$</span> 240,00</h4>
+
+                            <p>c/taxa inclusa</p>
+                        </div>
+                        <a href="#" target="_blank">Compre já</a></div>
+                </div>
+
+                <div class="az_td_mod_006_card">
+                    <div class="az_td_mod_006_block_name_oferta_content">
+                        <div class="az_td_mod_006_name_oferta">
+                            <p>Salvador</p>
+                        </div>
+                    </div>
+
+                    <div class="az_td_mod_006_card-image"><img alt="" class="az_td_mod_006_card-img bg" src="https://tudoazul.voeazul.com.br/documents/26002/995221/12.png/5a24a60a-7ac2-42ca-9b3f-b7156f91ede2?t=1616783241530" />
+                        <div class="az_td_mod_006_card-text">
+                            <h2>Partindo de São Paulo</h2>
+
+                            <h3>por:</h3>
+                            &nbsp;
+
+                            <h4><span>R$</span> 240,00</h4>
+
+                            <p>c/taxa inclusa</p>
+                        </div>
+                        <a href="#" target="_blank">Compre já</a></div>
+                </div>
+
+                <div class="az_td_mod_006_card">
+                    <div class="az_td_mod_006_block_name_oferta_content">
+                        <div class="az_td_mod_006_name_oferta">
+                            <p>Salvador</p>
+                        </div>
+                    </div>
+
+                    <div class="az_td_mod_006_card-image"><img alt="" class="az_td_mod_006_card-img" src="https://tudoazul.voeazul.com.br/documents/26002/995221/12.png/5a24a60a-7ac2-42ca-9b3f-b7156f91ede2?t=1616783241530" />
+                        <div class="az_td_mod_006_card-text">
+                            <h2>Partindo de São Paulo</h2>
+
+                            <h3>por:</h3>
+                            &nbsp;
+
+                            <h4><span>R$</span> 240,00</h4>
+
+                            <p>c/taxa inclusa</p>
+                        </div>
+                        <a href="#" target="_blank">Compre já</a></div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <div class="d-none" id="depois">&nbsp;</div>
+</div>
+<script>
+    $(".destinos-responsive22").slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [{
+            dots: true,
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }]
+    });
+</script>
+<script>
+    $(".destinos-responsive11").slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [{
+            dots: true,
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }]
+    });
+</script>
+<script>
+    window.onload = function() {
+        $(document).ready(function() {
+            $(".teste").css("display", "none")
+        })
+    };
+</script>
+<style type="text/css">
+    .dest {
+        display: block !important;
+    }
+</style>
+<!-- FIM OFERTA-->
