@@ -1,155 +1,151 @@
 <div>
     <!-- Links CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
-    <!-- Estilos da Página -->
-    <style>
-        /** Inicio do Estilo do cronometro **/
-        /** Este elemento é criado dentro de seu elemento de destino
-            É usado para que seu próprio elemento não precise ser alterado **/
-        
-        .time_circles {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .container-fluid {
-            width: 100%;
-            padding-right: 21px;
-            padding-left: 9px;
-            margin-right: auto;
-            margin-left: auto;
-        }
-        
-        @font-face {
-            font-family: 'DS-DIGIB';
-            src: url('ds_digital/DS-DIGI.TTF');
-            /*Para os demais navegadores*/
-            font-weight: normal;
-            font-style: normal;
-        }
-        /** Estes são todos os elementos usados ​​para abrigar todo o texto usado nos círculos do tempo **/
-        
-        .time_circles>div {
-            position: absolute;
-            text-align: center;
-        }
-        /** Títulos (dias, horas, etc) **/
-        
-        .time_circles>div>h4 {
-            margin: 0px;
-            padding: 0px;
-            text-align: center;
-            text-transform: uppercase;
-            font-family: DS-DIGIB !important;
-            font-size: 20px !important;
-            bottom: -240%;
-            left: 30%;
-            position: absolute;
-            color: #ffffff;
-        }
-        /** Números de tempo, ou seja: 12 **/
-        
-        .time_circles>div>span {
-            display: block;
-            width: 100%;
-            text-align: center;
-            font-family: DS-DIGIB !important;
-            font-size: 50px !important;
-            margin-top: 0.4em;
-            margin-left: -2px;
-            font-weight: bold;
-            color: #ffffff;
-        }
-        
-        @media screen and (max-width: 574px) {
-            .time_circles>div>h4 {
-                left: 20%;
-                font-size: 18px !important;
-                bottom: -340%;
-            }
-            .time_circles>div>span {
-                font-size: 30px !important;
-            }
-        }
-        /**--------------------------------------------**/
-        /** Inicio do Estilo Página **/
-        
-        .azv-crono {
-            padding-top: 25px;
-            padding-bottom: 60px;
-            background-color: #081c3b;
-        }
-        
-        .azv-crono .text1 {
-            font-size: 26px;
-            font-family: Helvetica, Arial, sans-serif;
-            color: #21b7e8;
-            font-weight: bold;
-        }
-        
-        .azv-crono .text2 {
-            font-size: 20px;
-            font-family: Helvetica, Arial, sans-serif;
-            color: #ffffff;
-            font-weight: 100;
-        }
-        /**--------------------------------------------**/
-    </style>
-
-    <!-- Corpo da página -->
-    <section class="new-clube-ta-banner conhecaOclube" style="background-image: url(/documents/26002/995221/topo.jpg.png/) !important;"></section>
-    <div class="box_cronometro">
-        <section class="d-flex flex-column">
-            <div class="container col-12 col-lg-12 d-flex flex-column justify-content-center align-items-center azv-crono">
-                <div class="col-12 col-lg-12">
-                    <p class="text-center"><span class="text1">Aqui, caiu a noite, os preços caem também.</span><br>
-                        <span class="text2">Superpromoção para voar das 20h às 5h da manhã, aproveite, antes que acabe!</span></p>
-                </div>
-                <div class="d-flex container justify-content-center align-items-center azv-banner-crono" style="margin: 0px 0px 40px 0px;">
-                    <div id="DateCountdown" data-date="2021-03-26 23:59:00" style="max-width: 560px; width: 100%;"></div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Links JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    <script src="https://tudoazul.voeazul.com.br/documents/26002/928058/TimeCircles.js"></script>
-    <script>
-        $("#DateCountdown").TimeCircles({
-            animation: "ticks",
-            bg_width: 1,
-            fg_width: 0.04,
-            circle_bg_color: "#164689",
-            time: {
-                Days: {
-                    text: "Dias",
-                    color: "#ffffff",
-                    show: true
-                },
-                Hours: {
-                    text: "Horas",
-                    color: "#ffffff",
-                    show: true
-                },
-                Minutes: {
-                    text: "Minutos",
-                    color: "#ffffff",
-                    show: true
-                },
-                Seconds: {
-                    text: "Segundos",
-                    color: "#ffffff",
-                    show: true
-                },
-            },
-        });
-    </script>
 </div>
+<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" rel="stylesheet" />
+<!-- Estilos da Página -->
+<style type="text/css">
+    /** Inicio do Estilo do cronometro **/
+    /** Este elemento é criado dentro de seu elemento de destino
+                É usado para que seu próprio elemento não precise ser alterado **/
+    
+    .time_circles {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .container-fluid {
+        width: 100%;
+        padding-right: 21px;
+        padding-left: 9px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    @font-face {
+        font-family: 'DS-DIGIB';
+        src: url('ds_digital/DS-DIGI.TTF');
+        /*Para os demais navegadores*/
+        font-weight: normal;
+        font-style: normal;
+    }
+    /** Estes são todos os elementos usados ​​para abrigar todo o texto usado nos círculos do tempo **/
+    
+    .time_circles>div {
+        position: absolute;
+        text-align: center;
+    }
+    /** Títulos (dias, horas, etc) **/
+    
+    .time_circles>div>h4 {
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: DS-DIGIB !important;
+        font-size: 20px !important;
+        bottom: -240%;
+        left: 25%;
+        position: absolute;
+        color: #ffffff;
+    }
+    /** Números de tempo, ou seja: 12 **/
+    
+    .time_circles>div>span {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-family: DS-DIGIB !important;
+        font-size: 50px !important;
+        margin-top: 0.4em;
+        margin-left: -2px;
+        font-weight: bold;
+        color: #ffffff;
+    }
+    
+    @media screen and (max-width: 574px) {
+        .time_circles>div>h4 {
+            left: 12%;
+            font-size: 12px !important;
+            bottom: -340%;
+        }
+        .time_circles>div>span {
+            font-size: 30px !important;
+        }
+    }
+    /**--------------------------------------------**/
+    /** Inicio do Estilo Página **/
+    
+    .azv-crono {
+        padding-top: 25px;
+        padding-bottom: 60px;
+        background-color: #001638;
+    }
+    
+    .azv-crono .text1 {
+        font-size: 26px;
+        color: #21b7e8;
+        font-weight: bold;
+    }
+    
+    .azv-crono .text2 {
+        font-size: 20px;
+        color: #ffffff;
+        font-weight: 100;
+    }
+    /**--------------------------------------------**/
+</style>
+<!-- Corpo da página -->
+<section class="new-clube-ta-banner conhecaOclube" style="background-image: url(/documents/26002/995221/topo.jpg.png/) !important;">&nbsp;</section>
 
+<div class="box_cronometro">
+    <section class="d-flex flex-column">
+        <div class="container col-12 col-lg-12 d-flex flex-column justify-content-center align-items-center azv-crono">
+            <div class="col-12 col-lg-12">
+                <p class="text-center"><span class="text1">Aqui, caiu a noite, os preços caem também.</span><br />
+                    <span class="text2">Superpromoção para voar das 20h às 5h da manhã, aproveite, antes que acabe!</span></p>
+            </div>
+
+            <div class="d-flex container justify-content-center align-items-center azv-banner-crono" style="margin: 0px 0px 40px 0px;">
+                <div data-date="2021-03-30 23:59:00" id="DateCountdown" style="width: 500px; height: 125px; padding: 0px; box-sizing: border-box;">&nbsp;</div>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- Links JavaScript -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://tudoazul.voeazul.com.br/documents/26002/928058/TimeCircles.js"></script>
+<script>
+    $("#DateCountdown").TimeCircles({
+        animation: "ticks",
+        bg_width: 1,
+        fg_width: 0.04,
+        circle_bg_color: "#ffffff",
+        time: {
+            Days: {
+                text: "Dias",
+                color: "#164689",
+                show: true
+            },
+            Hours: {
+                text: "Horas",
+                color: "#164689",
+                show: true
+            },
+            Minutes: {
+                text: "Minutos",
+                color: "#164689",
+                show: true
+            },
+            Seconds: {
+                text: "Segundos",
+                color: "#164689",
+                show: true
+            },
+        },
+    });
+</script>
 <!--INICIO OFERTA 1-->
 <style type="text/css">
     .az_oferta_fixalm {
@@ -300,7 +296,7 @@
     
     @media(max-width:658px) {
         .az_oferta_fixalm .az_oferta_fixalm_reais .az_oferta_fixalm_reais_boxreais_shape p {
-            font-size: 25px;
+            font-size: 23px;
         }
     }
     
@@ -324,7 +320,7 @@
             font-size: 26px;
         }
         .az_oferta_fixalm_reais_text .az_oferta_fixalm_reais_text_box .az_oferta_fixalm_reais_text_preco .az_oferta_fixalm_reais_text_value span {
-            font-size: 80px;
+            font-size: 68px;
         }
         .az_oferta_fixalm_reais_text .az_oferta_fixalm_reais_text_box .az_oferta_fixalm_reais_text_preco .az_oferta_fixalm_reais_text_value p {
             font-size: 46px;
@@ -495,7 +491,7 @@ R$</strong></p>
     <style type="text/css">
         .az_td_mod_006_behind .az_td_mod_006_name_oferta {
             width: 53%;
-            margin-top: -10px;
+            margin-top: -11px;
             left: -1px;
             position: absolute;
             padding: 15px 30px;
@@ -520,8 +516,6 @@ R$</strong></p>
         
         .az_td_mod_006_behind {
             background-image: url(https://tudoazul.voeazul.com.br/documents/26002/995221/88_lp2_02-min.png);
-            margin-left: -10px;
-            margin-right: -10px;
         }
         
         .az_td_conteiner_mod_066 {
@@ -618,7 +612,7 @@ R$</strong></p>
         }
         
         .az_td_mod_006_card-text_2 h3 {
-            padding: 30px 11px!important;
+            padding: 30px 11px !important;
         }
     </style>
     <div class="col-lg-12 padding_lados0 d-flex flex-row flex-lg-row justify-content-center align-items-center mb-font-13" style="color: #fff; font-size: 22px; font-weight: bold; padding: 25px 0px;background: #081d3b;margin-bottom: -37px!important;">
@@ -666,7 +660,7 @@ R$</strong></p>
     </div>
     <!--Pontos-->
 
-    <section class="container-fluid pontos d-none" id="boxesDestination">
+    <section class="pontos d-none" id="boxesDestination">
         <section class="az_td_mod_006_behind">
             <div class="az_td_conteiner_mod_066">
                 <div class="az_td_mod_006_card">
@@ -801,7 +795,7 @@ R$</strong></p>
     </section>
     <!--Reias-->
 
-    <section class="container-fluid reais" id="boxesDestination">
+    <section class="reais" id="boxesDestination">
         <section class="az_td_mod_006_behind">
             <div class="az_td_conteiner_mod_066">
                 <div class="az_td_mod_006_card">
